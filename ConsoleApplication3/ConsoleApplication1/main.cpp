@@ -21,7 +21,7 @@ int main( )
 	//此句代码的OpenCV3版为：
 	cvtColor( srcImage, grayImage, COLOR_BGR2GRAY );
 
-	//【3】先用使用 3x3内核来降噪
+	//【3】先用使用 3x3内核来降噪获取
 	blur( grayImage, edge, Size(3,3) );
 
 	//【4】运行Canny算子
