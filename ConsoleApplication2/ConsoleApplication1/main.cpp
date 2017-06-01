@@ -11,11 +11,15 @@ int main( )
 	imshow( "均值滤波【原图】", srcImage ); 
 
 	//【3】进行均值滤波操作
-	Mat dstImage; 
-	blur( srcImage, dstImage, Size(7, 7)); 
+	Mat dstImage3, dstImage5, dstImage7;
+	blur( srcImage, dstImage3, Size(3, 3));
+	blur(srcImage, dstImage5, Size(5, 5));
+	blur(srcImage, dstImage7, Size(7, 7));
 
 	//【4】显示效果图
-	imshow( "均值滤波【效果图】" ,dstImage ); 
+	imshow( "均值滤波【效果图3】" , dstImage3);
+	imshow("均值滤波【效果图5】", dstImage5);
+	imshow("均值滤波【效果图7】", dstImage7);
 
 	waitKey( 0 );     
 } 
